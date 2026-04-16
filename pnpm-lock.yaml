@@ -37,8 +37,8 @@ importers:
         specifier: ^0.89.0
         version: 0.89.0
       '@context-lint/core':
-        specifier: workspace:*
-        version: link:../core
+        specifier: ^0.1.0
+        version: 0.1.0(typescript@5.9.3)
       cosmiconfig:
         specifier: ^9.0.0
         version: 9.0.1(typescript@5.9.3)
@@ -125,6 +125,9 @@ packages:
   '@babel/runtime@7.29.2':
     resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
+
+  '@context-lint/core@0.1.0':
+    resolution: {integrity: sha512-bPXj4/Ug0ZGJCfmFWMXCc8bqsyEcq9L7bsxtMgTMYnrvILqUo03zPQT49grfbjZWtKevdl60fAjiV67KfN9Lgg==}
 
   '@emnapi/core@1.9.2':
     resolution: {integrity: sha512-UC+ZhH3XtczQYfOlu3lNEkdW/p4dsJ1r/bP7H8+rhao3TTTMO1ATq/4DdIi23XuGoFY+Cz0JmCbdVl0hz9jZcA==}
@@ -1896,6 +1899,17 @@ snapshots:
   '@babel/helper-validator-identifier@7.28.5': {}
 
   '@babel/runtime@7.29.2': {}
+
+  '@context-lint/core@0.1.0(typescript@5.9.3)':
+    dependencies:
+      i18next: 24.2.3(typescript@5.9.3)
+      remark-gfm: 4.0.1
+      remark-parse: 11.0.0
+      unified: 11.0.5
+      unist-util-visit: 5.1.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   '@emnapi/core@1.9.2':
     dependencies:
