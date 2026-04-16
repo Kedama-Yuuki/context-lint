@@ -1,0 +1,59 @@
+name: Rule Proposal
+description: Propose a new lint rule
+labels: [rule-proposal]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Rule name
+      description: A short descriptive name
+      placeholder: "Detect undefined token references"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - M1 — Contradiction
+        - M2 — Duplication
+        - M3 — Clarity
+        - M4 — Lost in the Middle
+        - New category
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Suggested severity
+      options:
+        - CRITICAL
+        - HIGH
+        - MEDIUM
+        - LOW
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this rule detect? Why is it important for AI context files?
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Show valid (should pass) and invalid (should fail) examples
+      placeholder: |
+        **Invalid (should fail):**
+        ```markdown
+        ...
+        ```
+
+        **Valid (should pass):**
+        ```markdown
+        ...
+        ```
+    validations:
+      required: true

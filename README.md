@@ -165,7 +165,7 @@ context-lint CLAUDE.md --locale ja
 
 ## Contributing
 
-Issues and PRs are welcome on [GitHub](https://github.com/anthropics/context-lint).
+Issues and PRs are welcome on [GitHub](https://github.com/Kedama-Yuuki/context-lint).
 
 ## License
 

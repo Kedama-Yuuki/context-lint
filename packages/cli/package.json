@@ -2,6 +2,27 @@
   "name": "context-lint",
   "version": "0.1.0",
   "description": "The linter for AI-readable context files",
+  "license": "MIT",
+  "author": "Kedama Design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kedama-Yuuki/context-lint.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/Kedama-Yuuki/context-lint",
+  "bugs": {
+    "url": "https://github.com/Kedama-Yuuki/context-lint/issues"
+  },
+  "keywords": [
+    "context-lint",
+    "ai",
+    "lint",
+    "claude",
+    "design-system",
+    "markdown",
+    "context",
+    "cli"
+  ],
   "type": "module",
   "bin": {
     "context-lint": "./dist/index.js"
