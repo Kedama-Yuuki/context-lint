@@ -1,5 +1,5 @@
 {
-  "name": "context-lint",
+  "name": "context-lint-monorepo",
   "private": true,
   "description": "The linter for AI-readable context files",
   "repository": {
