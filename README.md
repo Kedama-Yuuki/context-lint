@@ -8,6 +8,8 @@ The linter for AI-readable context files. Validate your `CLAUDE.md`, `DESIGN.md`
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org)
 [![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blueviolet)](https://claude.ai/code)
 
+![context-lint demo](demo/context-lint-demo.gif)
+
 ## Why context-lint?
 
 AI agents are only as good as the context you give them. A `CLAUDE.md` with contradictory instructions or a `DESIGN.md` with ambiguous token definitions leads to unpredictable AI output.
