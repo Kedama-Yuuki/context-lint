@@ -1,6 +1,6 @@
 {
   "name": "context-lint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The linter for AI-readable context files",
   "license": "MIT",
   "author": "Kedama Design",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.89.0",
-    "@context-lint/core": "workspace:*",
+    "@context-lint/core": "^0.1.0",
     "cosmiconfig": "^9.0.0",
     "globby": "^14.0.0",
     "picocolors": "^1.1.0"
