@@ -45,7 +45,6 @@ const rule: RuleModule = {
     category: "clarity",
     description: "Negative constraints should not be overused",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

@@ -14,7 +14,7 @@ export interface RunOptions {
   source: string;
   ast: Root;
   filePath: string;
-  rules: RuleModule[];
+  rules: readonly RuleModule[];
   ruleSettings: Record<string, RuleSetting>;
 }
 

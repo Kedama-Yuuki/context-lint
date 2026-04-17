@@ -16,7 +16,6 @@ const rule: RuleModule = {
     category: "clarity",
     description: "Values must have explicit units or types (e.g., 8px not 8)",
     fixable: true,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

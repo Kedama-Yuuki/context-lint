@@ -10,7 +10,6 @@ const mockRule: RuleModule = {
     category: "clarity",
     description: "Test rule",
     fixable: false,
-    presets: ["design-md"],
   },
   create(context) {
     return {
@@ -28,7 +27,6 @@ const wholeDocRule: RuleModule = {
     category: "clarity",
     description: "Whole-doc rule",
     fixable: false,
-    presets: ["design-md"],
   },
   create(context) {
     return {

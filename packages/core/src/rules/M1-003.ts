@@ -36,7 +36,6 @@ const rule: RuleModule = {
     category: "contradiction",
     description: "Referenced file paths must actually exist",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

@@ -25,7 +25,6 @@ const rule: RuleModule = {
     category: "duplication",
     description: "Same content must not be duplicated across multiple sections",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

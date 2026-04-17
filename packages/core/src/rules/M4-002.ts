@@ -20,7 +20,6 @@ const rule: RuleModule = {
     category: "lost-in-middle",
     description: "File token count must be within the recommended limit (8,000 tokens)",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

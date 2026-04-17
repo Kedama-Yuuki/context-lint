@@ -10,12 +10,12 @@ export type RuleCategory =
   | "clarity"
   | "lost-in-middle";
 export type RuleSetting = "off" | "warn" | "error";
-export type Preset = "design-md" | "claude-md" | "tokens-json";
 
 export interface LintConfig {
-  preset: Preset | "auto";
   rules: Record<string, RuleSetting>;
   ignorePatterns: string[];
+  /** Reserved for Phase 2 plugin API */
+  plugins?: string[];
 }
 
 // --- Rule System ---
@@ -26,7 +26,6 @@ export interface RuleMeta {
   category: RuleCategory;
   description: string;
   fixable: boolean;
-  presets: Preset[];
 }
 
 export interface FixSuggestion {

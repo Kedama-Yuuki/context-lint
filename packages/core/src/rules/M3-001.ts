@@ -38,7 +38,6 @@ const rule: RuleModule = {
     category: "clarity",
     description: "Ambiguous words must not be used",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

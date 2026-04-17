@@ -13,7 +13,6 @@ const rule: RuleModule = {
     category: "contradiction",
     description: "Same token/variable name must not have different values across definitions",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

@@ -1,10 +1,9 @@
 import { parse } from "./parser.js";
 import { runRules } from "./runner.js";
 import { createScorer } from "./scorer.js";
-import { getAllRules, getRulesForPreset } from "./registry.js";
-import { detectPreset } from "./preset.js";
+import { getAllRules } from "./registry.js";
 import { registerAllRules } from "./rules/index.js";
-import type { LintResult, LintConfig, Preset, RuleSetting } from "./types.js";
+import type { LintResult, LintConfig, RuleSetting } from "./types.js";
 
 // Auto-register built-in rules on first import
 let rulesRegistered = false;
@@ -28,16 +27,13 @@ export async function lint(
 
   const filePath = options.filePath ?? "";
 
-  // 1. Determine preset
-  const preset = resolvePreset(options.preset, filePath, source);
-
-  // 2. Parse Markdown → AST
+  // 1. Parse Markdown → AST
   const ast = parse(source);
 
-  // 3. Get rules for this preset
-  const rules = getRulesForPreset(preset);
+  // 2. Get all rules
+  const rules = getAllRules();
 
-  // 4. Merge rule settings: defaults (all "error") + user overrides
+  // 3. Merge rule settings: defaults (all "error") + user overrides
   const ruleSettings: Record<string, RuleSetting> = {};
   for (const rule of rules) {
     ruleSettings[rule.meta.id] = "error";
@@ -46,7 +42,7 @@ export async function lint(
     Object.assign(ruleSettings, options.rules);
   }
 
-  // 5. Run rules
+  // 4. Run rules
   const messages = runRules({
     source,
     ast,
@@ -55,7 +51,7 @@ export async function lint(
     ruleSettings,
   });
 
-  // 6. Score
+  // 5. Score
   const scorer = createScorer();
   const { score, rank } = scorer.calculate(messages);
 
@@ -65,15 +61,4 @@ export async function lint(
     score,
     rank,
   };
-}
-
-function resolvePreset(
-  configPreset: LintConfig["preset"] | undefined,
-  filePath: string,
-  source: string,
-): Preset {
-  if (configPreset && configPreset !== "auto") {
-    return configPreset;
-  }
-  return detectPreset(filePath, source);
 }

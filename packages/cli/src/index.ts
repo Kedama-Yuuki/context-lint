@@ -99,7 +99,16 @@ interface FileConfig {
 }
 
 async function loadConfig(cwd: string): Promise<FileConfig> {
-  const explorer = cosmiconfig("context-lint");
+  const explorer = cosmiconfig("context-lint", {
+    searchPlaces: [
+      ".context-lint.config.json",
+      ".context-lint.config.yaml",
+      ".context-lint.config.yml",
+      ".context-lint.config.js",
+      ".context-lint.config.cjs",
+      ".context-lint.config.mjs",
+    ],
+  });
   try {
     const result = await explorer.search(cwd);
     if (result && !result.isEmpty) {

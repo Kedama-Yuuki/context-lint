@@ -52,7 +52,6 @@ const rule: RuleModule = {
     category: "contradiction",
     description: "Contradictory positive/negative constraints must not coexist",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

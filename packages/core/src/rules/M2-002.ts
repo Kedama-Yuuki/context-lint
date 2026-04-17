@@ -72,7 +72,6 @@ const rule: RuleModule = {
     category: "duplication",
     description: "Same concept must not be referred to by multiple different names",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

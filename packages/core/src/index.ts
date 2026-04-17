@@ -16,8 +16,7 @@ export { formatText, formatJson } from "./reporter.js";
 export { parse } from "./parser.js";
 
 // Rule system
-export { registerRule, registerRules, getAllRules, getRulesForPreset } from "./registry.js";
-export { detectPreset } from "./preset.js";
+export { registerRule, registerRules, getAllRules } from "./registry.js";
 
 // i18n
 export { initI18n, t } from "./i18n/index.js";
@@ -36,5 +35,4 @@ export type {
   Severity,
   RuleSetting,
   Rank,
-  Preset,
 } from "./types.js";

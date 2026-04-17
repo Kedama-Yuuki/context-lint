@@ -1,4 +1,4 @@
-import type { RuleModule, Preset } from "./types.js";
+import type { RuleModule } from "./types.js";
 
 const allRules: RuleModule[] = [];
 
@@ -12,8 +12,4 @@ export function registerRules(rules: RuleModule[]): void {
 
 export function getAllRules(): readonly RuleModule[] {
   return allRules;
-}
-
-export function getRulesForPreset(preset: Preset): RuleModule[] {
-  return allRules.filter((rule) => rule.meta.presets.includes(preset));
 }

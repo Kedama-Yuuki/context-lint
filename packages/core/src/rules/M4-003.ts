@@ -27,7 +27,6 @@ const rule: RuleModule = {
     category: "lost-in-middle",
     description: "Important references should be consolidated in the opening section",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {

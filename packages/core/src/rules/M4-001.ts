@@ -32,7 +32,6 @@ const rule: RuleModule = {
     category: "lost-in-middle",
     description: "CRITICAL constraints must appear in the top 20% of the file",
     fixable: false,
-    presets: ["design-md", "claude-md"],
   },
   create(context) {
     return {
