@@ -18,7 +18,8 @@
   "references": [
     { "path": "packages/core" },
     { "path": "packages/cli" },
-    { "path": "packages/figma-plugin" }
+    { "path": "packages/figma-plugin" },
+    { "path": "packages/vscode" }
   ],
   "exclude": ["node_modules", "dist"]
 }

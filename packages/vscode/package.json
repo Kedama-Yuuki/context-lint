@@ -1,0 +1,79 @@
+{
+  "name": "context-lint-vscode",
+  "displayName": "context-lint",
+  "description": "Lint your AI context files (CLAUDE.md, DESIGN.md) for contradictions, ambiguity, and lost-in-the-middle risks.",
+  "version": "0.1.0",
+  "publisher": "kedama-dev",
+  "license": "MIT",
+  "author": "Kedama Design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kedama-Yuuki/context-lint.git",
+    "directory": "packages/vscode"
+  },
+  "homepage": "https://github.com/Kedama-Yuuki/context-lint",
+  "bugs": {
+    "url": "https://github.com/Kedama-Yuuki/context-lint/issues"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "keywords": [
+    "lint",
+    "ai",
+    "claude",
+    "context",
+    "markdown",
+    "design-system"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./dist/client/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "contextLint.fixAll",
+        "title": "context-lint: Fix All"
+      },
+      {
+        "command": "contextLint.aiFix",
+        "title": "context-lint: AI Fix (BYOK)"
+      }
+    ],
+    "configuration": {
+      "title": "context-lint",
+      "properties": {
+        "contextLint.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable context-lint diagnostics."
+        },
+        "contextLint.aiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Anthropic API key for AI-powered fix suggestions (BYOK)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "vscode:prepublish": "node esbuild.mjs --production"
+  },
+  "dependencies": {
+    "@context-lint/core": "workspace:^",
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  }
+}
