@@ -143,18 +143,19 @@ jobs:
 
 ```
 packages/
-  core/          # Detection engine (browser-compatible, no Node.js dependencies)
+  core/          # Detection engine (no filesystem dependencies)
   cli/           # CLI entry point (npx context-lint)
-  figma-plugin/  # Figma plugin (Phase 1)
+  vscode/        # VSCode extension (LSP-based)
+  figma-plugin/  # Figma plugin (Phase 3)
 ```
 
-The core package is designed to run in both Node.js and browser environments (Figma plugin), with zero filesystem dependencies.
+The core package has zero filesystem dependencies, allowing it to run in Node.js, browser (Figma plugin), and VSCode extension host environments.
 
 ## Roadmap
 
-- [x] **Phase 1** &mdash; CLAUDE.md + DESIGN.md linting, CLI, scoring
+- [x] **Phase 1** &mdash; CLAUDE.md + DESIGN.md linting, CLI, scoring, VSCode extension
 - [ ] **Phase 2** &mdash; Plugin API for community rules
-- [ ] **Phase 3** &mdash; Cross-file graph analysis
+- [ ] **Phase 3** &mdash; Cross-file graph analysis, Figma plugin
 - [ ] **Phase 4** &mdash; API reference context validation
 
 ## i18n
