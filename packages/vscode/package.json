@@ -3,7 +3,7 @@
   "displayName": "context-lint",
   "description": "Lint your AI context files (CLAUDE.md, DESIGN.md) for contradictions, ambiguity, and lost-in-the-middle risks.",
   "version": "0.1.0",
-  "publisher": "kedama-dev",
+  "publisher": "Kedama-Design",
   "license": "MIT",
   "author": "Kedama Design",
   "repository": {
@@ -14,6 +14,11 @@
   "homepage": "https://github.com/Kedama-Yuuki/context-lint",
   "bugs": {
     "url": "https://github.com/Kedama-Yuuki/context-lint/issues"
+  },
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
   },
   "categories": [
     "Linters"

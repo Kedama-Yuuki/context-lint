@@ -1,0 +1,8 @@
+**/*.ts
+**/tsconfig.json
+**/esbuild.mjs
+src/
+node_modules/
+.vscode/
+**/*.js.map
+assets/icon.svg
